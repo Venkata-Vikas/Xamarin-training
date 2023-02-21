@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Padding="20"
+    x:Class="SampleApp.QuotesPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                Android="20, 50, 20, 20"
+                WinPhone="20, 40, 20, 20">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{x:Reference Slider1}" VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Label Text="Slider value : " FontSize="Large"/>
+                <Label Text="{Binding Value}" FontSize="Large"/>
+            </StackLayout>
+            <Slider Maximum="50" Minimum="16" ThumbColor="Green" MinimumTrackColor="Silver" MaximumTrackColor="Black" x:Name="Slider1"/>
+            <Label x:Name="label1" FontSize="{Binding Value}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
