@@ -18,6 +18,7 @@
             </StackLayout>
             <Slider Maximum="50" Minimum="16" ThumbColor="Green" MinimumTrackColor="Silver" MaximumTrackColor="Black" x:Name="Slider1"/>
             <Label x:Name="label1" FontSize="{Binding Value}"/>
+            <Button Text="Next" BackgroundColor="Blue" Clicked="Button_Clicked" TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
